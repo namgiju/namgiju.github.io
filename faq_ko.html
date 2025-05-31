@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>가천대학교 유학생 지원 웹사이트</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      background-color: white;
+      padding: 0 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .topnav img {
+      height: 200px;
+      width: auto;
+      margin-top: 10px;
+      margin-left: -20px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      margin-left: 20px;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #4FC3F7;
+    }
+
+    .nav-links img {
+      width: 30px;
+      height: 30px;
+      margin-left: -1px;
+    }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .lang-dropdown img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .lang-dropdown:hover .lang-menu {
+      display: block;
+    }
+
+    .lang-menu a {
+      display: block;
+      padding: 8px 12px 8px 4px;
+      text-decoration: none;
+      color: black;
+      text-indent: -5px;
+    }
+
+    .welcome-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f4f8;
+      padding: 50px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      gap: 30px;
+    }
+
+    .welcome-text {
+      flex: 1;
+      max-width: 600px;
+      margin-right: 40px;
+    }
+
+    .welcome-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .welcome-image img {
+      height: 120px;
+      object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .middle-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .info-section img {
+      width: 45%;
+      border-radius: 8px;
+    }
+
+    .info-section .text-box {
+      width: 45%;
+      font-size: 20px;
+    }
+
+    .info-section h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .middle-content a {
+      text-decoration: none;
+    }
+
+    .footer {
+      background-color: #2e3036;
+      color: #b0b3ba;
+      padding: 60px 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      height: 50px;
+    }
+
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .footer img {
+      width: auto;
+      height: 80px;
+      margin-right: 200px;
+      margin-left: -300px;
+    }
+
+    @media (max-width: 800px) {
+      .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .info-section img,
+      .info-section .text-box {
+        width: 100%;
+      }
+    }
+        details {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 12px 16px;
+    }
+
+
+    .content {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 10px;
+    }
+    summary {
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: black;
+    transition: color 0.2s ease-in-out;
+    }
+
+    summary:hover {
+    color: #4FC3F7;
+    }
+    summary::before {
+    margin-right: 12px;
+    font-weight: bold;
+    color: #05309D;
+    transition: color 0.2s;
+    }
+
+    summary:hover::before {
+    color: #4FC3F7;
+    }
+    
+
+        
+    
+
+
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index_ko.html"><img src="A_vector-based_image_of_the_logo_for_Gachon_Univer.png" alt="로고" /></a>
+    <div class="nav-links">
+      <a href="life_info_ko.html">생활 정보</a>
+      <a href="visa_stay_ko.html">비자 및 체류</a>
+      <a href="hos_ko.html">병원 및 응급</a>
+      <a href="con_info_ko.html">문의처 안내</a>
+      <a href="faq_ko.html">자주 묻는 질문</a>
+      <div class="lang-dropdown">
+        <img src="language2.png" alt="Language selection" />
+        <div class="lang-menu">
+          <a href="faq_ko.html">한국어</a>
+          <a href="faq_en.html">English</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <details>
+    <summary>&nbsp&nbsp유학생도 한국 건강보험에 의무적으로 가입해야 하나요?</summary>
+    <div class="content">
+        네, 6개월 이상 체류하는 외국인은 건강보험에 자동으로 가입되며 매월 보험료가 부과됩니다.
+    </div>
+    </details>
+
+    <details>
+    <summary>&nbsp&nbsp수강신청 오류가 발생하면 누구에게 문의하나요?</summary>
+    <div class="content">
+        학사관리팀 또는 외국인유학생서비스팀에 문의하면 됩니다.
+    </div>
+    </details>
+
+    <details>
+    <summary>&nbsp&nbsp수업은 모두 한국어로 진행되나요?</summary>
+    <div class="content">
+        대부분은 한국어로 진행되지만, 일부는 영어 수업도 제공됩니다.
+    </div>
+    </details>
+
+    <details>
+    <summary>&nbsp&nbsp유학생도 아르바이트가 가능한가요?</summary>
+    <div class="content">
+        일정 조건을 충족하면 출입국사무소 허가 후 주당 20시간까지 가능합니다.
+    </div>
+    </details>
+
+    <details>
+    <summary>&nbsp&nbsp수업 교재는 어디서 구매 가능한가요?</summary>
+    <div class="content">
+        교수님에게 질문 또는 강의계획서를 참고하여 캠퍼스 내 서점 또는 온라인을 통해 구매가능합니다.
+    </div>
+    </details>
+
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="footer_logo.png" alt="가천대학교 로고" class="footer-logo" />
+      <div class="footer-text">
+        <p>글로벌캠퍼스: (13120) 경기도 성남시 수정구 성남대로 1342 TEL.031-750-5114</p>
+        <p>메디컬캠퍼스: (21936) 인천광역시 연수구 함박뫼로 191 TEL.032-820-4000</p>
+        <p>&copy; 2025 My Webpage. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

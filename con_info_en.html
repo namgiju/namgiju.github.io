@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>Gachon University International Student Support Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      background-color: white;
+      padding: 0 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .topnav img {
+      height: 200px;
+      width: auto;
+      margin-top: 10px;
+      margin-left: -20px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      margin-left: 20px;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #4FC3F7;
+    }
+
+    .nav-links img {
+      width: 30px;
+      height: 30px;
+      margin-left: -1px;
+    }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .lang-dropdown img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .lang-dropdown:hover .lang-menu {
+      display: block;
+    }
+
+    .lang-menu a {
+      display: block;
+      padding: 8px 12px 8px 4px;
+      text-decoration: none;
+      color: black;
+      text-indent: -5px;
+    }
+
+    .welcome-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f4f8;
+      padding: 50px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      gap: 30px;
+    }
+
+    .welcome-text {
+      flex: 1;
+      max-width: 600px;
+      margin-right: 40px;
+    }
+
+    .welcome-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .welcome-image img {
+      height: 120px;
+      object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .middle-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .info-section img {
+      width: 45%;
+      border-radius: 8px;
+    }
+
+    .info-section .text-box {
+      width: 45%;
+      font-size: 20px;
+    }
+
+    .info-section h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .middle-content a {
+      text-decoration: none;
+    }
+
+    .footer {
+      background-color: #2e3036;
+      color: #b0b3ba;
+      padding: 60px 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      height: 50px;
+    }
+
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .footer img {
+      width: auto;
+      height: 80px;
+      margin-right: 200px;
+      margin-left: -300px;
+    }
+
+    @media (max-width: 800px) {
+      .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .info-section img,
+      .info-section .text-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index_en.html"><img src="A_vector-based_image_of_the_logo_for_Gachon_Univer.png" alt="로고" /></a>
+    <div class="nav-links">
+      <a href="life_info_en.html">Life Info</a>
+      <a href="visa_stay_en.html">Visa & Stay</a>
+      <a href="hos_en.html">Hospitals & Emergency</a>
+      <a href="con_info_en.html">Contact Info</a>
+      <a href="faq_en.html">FAQ</a>
+      <div class="lang-dropdown">
+        <img src="language2.png" alt="Language selection" />
+        <div class="lang-menu">
+          <a href="con_info_ko.html">한국어</a>
+          <a href="con_info_en.html">English</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="welcome-section">
+    <div class="welcome-text">
+      <h2>Welcome to the Gachon University International Student Portal</h2>
+      <p>This page introduces the support services available to help you succeed during your time at Gachon.</p>
+    </div>
+    <div class="welcome-image">
+      <img src="welcome.png" alt="International student character">
+    </div>
+  </div>
+
+  <div class="middle-content">
+    <div class="info-section">
+      <img src="Col.png" alt="Office image">
+      <div class="text-box">
+        <h2>Office of International Student Services</h2>
+        <p>Global Center Room 731</p><br>
+        <p>Provides support for academics, scholarships, immigration, and Korean language programs for international students.</p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <img src="Col2.png" alt="Office image">
+      <div class="text-box">
+        <h2>Office of International Affairs</h2>
+        <p>Global Center Room 730</p><br>
+        <p>Plans and operates exchange, short-term study, and language programs to help students strengthen their global competencies.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="footer_logo.png" alt="Gachon University Logo" class="footer-logo" />
+      <div class="footer-text">
+        <p>Global Campus: (13120) 1342 Seongnam-daero, Sujeong-gu, Seongnam-si, Gyeonggi-do TEL.031-750-5114</p>
+        <p>Medical Campus: (21936) 191 Hambakmoe-ro, Yeonsu-gu, Incheon TEL.032-820-4000</p>
+        <p>&copy; 2025 My Webpage. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
