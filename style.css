@@ -312,8 +312,8 @@ summary:hover::before {
 }
 
 .footer img {
-  width: auto;
-  height: 80px;
+  width: 200px;
+  height: 100px;
   margin-right: 100px;
   margin-left: -100px;
 }
