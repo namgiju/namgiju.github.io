@@ -7,6 +7,217 @@
   <link rel="stylesheet" href="style.css">
 
   <title>가천대학교 유학생 지원 웹사이트</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      background-color: white;
+      padding: 0 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .topnav img {
+      height: 200px;
+      width: auto;
+      margin-top: 10px;
+      margin-left: -20px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      margin-left: 20px;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #4FC3F7;
+    }
+
+    .nav-links img {
+      width: 30px;
+      height: 30px;
+      margin-left: -1px;
+    }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .lang-dropdown img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .lang-dropdown:hover .lang-menu {
+      display: block;
+    }
+
+    .lang-menu a {
+      display: block;
+      padding: 8px 12px 8px 4px;
+      text-decoration: none;
+      color: black;
+      text-indent: -5px;
+    }
+
+    .welcome-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f4f8;
+      padding: 50px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      gap: 30px;
+    }
+
+    .welcome-text {
+      flex: 1;
+      max-width: 600px;
+      margin-right: 40px;
+    }
+
+    .welcome-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .welcome-image img {
+      height: 120px;
+      object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .middle-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .info-section img {
+      width: 45%;
+      border-radius: 8px;
+    }
+
+    .info-section .text-box {
+      width: 45%;
+      font-size: 20px;
+    }
+
+    .info-section h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .middle-content a {
+      text-decoration: none;
+    }
+
+    .footer {
+      background-color: #2e3036;
+      color: #b0b3ba;
+      padding: 60px 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      height: 50px;
+    }
+
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .footer img {
+      width: auto;
+      height: 80px;
+      margin-right: 200px;
+      margin-left: -300px;
+    }
+
+    @media (max-width: 800px) {
+      .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .info-section img,
+      .info-section .text-box {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
