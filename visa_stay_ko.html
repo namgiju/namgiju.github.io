@@ -6,19 +6,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <title>가천대학교 유학생 지원 웹사이트</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background: #f9f9f9;
     }
 
     .topnav {
-        /*요소들을 가로행으로 배치후 저스티파이콘텐츠로 좌우 균등분배 로고는 왼쪽정렬 나브는 오른쪽정렬을 위해 
-        코드에서는 나브 클래스 안에서 추가로 나브 링크 클래스를 추가함 얼라인아이템으로 텍스트들의 상하정렬 */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -27,16 +21,17 @@
       padding: 0 25px;
       border-bottom: 1px solid #ddd;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
     }
+
     .topnav img {
-        /*로고가 오른쪽으로 치우쳐서 마진레프트 값을 음수로 줌 해도 되는지 모르겠음*/
-        height: 200px;
-        width: auto;
-        margin-top: 10px;
-        margin-left: -20px;
+      height: 200px;
+      width: auto;
+      margin-top: 10px;
+      margin-left: -20px;
     }
 
     .nav-links a {
@@ -45,21 +40,19 @@
       font-size: 17px;
       margin-left: 20px;
       transition: color 0.2s ease-in-out;
-      /*호버 지피티한테 따옴*/
     }
+
     .nav-links a:hover {
       color: #4FC3F7;
     }
-    .nav-links img{
-        /*이것도 이미지로 넣으니깐 치우쳐짐 음수로 적당하게 맞춤*/
-        width: 30px;
-        height: 30px;
-        margin-left: -1px;
+
+    .nav-links img {
+      width: 30px;
+      height: 30px;
+      margin-left: -1px;
     }
 
     .content {
-        /*요소들을 가로행으로 배치 저스티파이 콘텐츠로 거리 균등 분배 얼라인 아이템 플렉스 스타트로
-        나브와 콘텐츠 컨테이너 붙이기*/
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -68,8 +61,6 @@
     }
 
     .slider-container {
-          /* 남는 공간 자동으로 차지하게 만들어 콘텐츠 너비 조절 오버플로우 히든으로 이미지가 튀어나가지 않게 조절
-          박스 섀도우로 약간의 입체감 생성*/
       position: relative;
       flex: 1;
       max-width: 60%;
@@ -81,13 +72,11 @@
     }
 
     .slider {
-        /*슬라이드 가로배치 후 부드럽게 넘기기*/
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
 
     .slide {
-        /*정확히 한 화면크기만큼 넘기기 위해 위드 100퍼 가운데 정렬을 위한 플렉스 얼라인아이템 저스티파이콘텐츠*/
       min-width: 100%;
       display: flex;
       align-items: center;
@@ -96,7 +85,6 @@
     }
 
     .slide img {
-        /*슬라이드 이미지를 꽉 채우고 비율이 깨지지 않게 오브젝트 핏 콘테인*/
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
@@ -126,13 +114,8 @@
       background: rgba(0, 0, 0, 0.5);
     }
 
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     .right-column {
       flex: 0 0 35%;
@@ -154,6 +137,7 @@
         max-width: 100%;
       }
     }
+
     .footer {
       background-color: #2e3036;
       color: #b0b3ba;
@@ -164,7 +148,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 40px;
+      gap: 0px;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -183,8 +167,9 @@
       width: auto;
       height: 80px;
       margin-right: 200px;
-      margin-left: -300px;
+      margin-left: -200px;
     }
+
     .welcome-section {
       display: flex;
       justify-content: center;
@@ -218,6 +203,7 @@
       margin-left: auto;
       margin-right: 0;
     }
+
     .lang-dropdown {
       position: relative;
       display: inline-block;
@@ -233,6 +219,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       z-index: 999;
     }
+
     .lang-dropdown img {
       width: 30px;
       height: 30px;
@@ -244,11 +231,10 @@
 
     .lang-menu a {
       display: block;
-      padding: 8px 12px 8px 4px;  /* 상 우 하 좌 */
+      padding: 8px 12px 8px 4px;
       text-decoration: none;
       color: black;
       text-indent: -5px;
-      
     }
 
     .middle-content {
@@ -257,12 +243,12 @@
       align-items: center;
       gap: 40px;
       padding: 50px 20px;
-    } 
+    }
 
     .info-section {
       display: flex;
       justify-content: space-between;
-      align-items: center;  /* ← 세로 가운데 정렬 */
+      align-items: center;
       padding: 20px;
       background: white;
       border-radius: 12px;
@@ -280,13 +266,10 @@
       width: 45%;
       font-size: 20px;
     }
-    .info-section h2{
+
+    .info-section h2 {
       font-weight: bold;
       font-size: 30px;
-    }
-    .middle-content a{
-        text-decoration: none;
-        
     }
   </style>
 </head>
