@@ -229,6 +229,7 @@ body {
 .info-section .text-box {
   width: 45%;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .info-section h2 {
