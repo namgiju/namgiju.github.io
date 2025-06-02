@@ -229,9 +229,11 @@ body {
 .info-section .text-box {
   width: 45%;
   font-size: 20px;
-  text-decoration: none;
 }
 
+.text-box a {
+  text-decoration: none;
+}
 .info-section h2 {
   font-weight: bold;
   font-size: 30px;
