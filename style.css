@@ -231,7 +231,7 @@ body {
   font-size: 20px;
 }
 
-.text-box a {
+.info-section .text-box a {
   text-decoration: none;
 }
 .info-section h2 {
